@@ -48,7 +48,6 @@ TEST_CASE("Quick sort")
         return left.first < right.first;
     };
 
-/*
     BENCHMARK_ADVANCED("Quick sort (1k)")(Catch::Benchmark::Chronometer meter) {
         vector<pair<int,int>> v = makePairVector(1000);
         meter.measure([&v,&isPairLess] {
@@ -88,7 +87,6 @@ TEST_CASE("Quick sort")
 			return v;
         });
     };
-*/
 }
 
 TEST_CASE("Bucket sort")
@@ -123,7 +121,6 @@ TEST_CASE("Bucket sort")
 	bucketSort(vPair, 5);
 	REQUIRE(vPair == vector<pair<int,string>> {{1,"one"}, {2,"two"}, {3,"three"}, {4,"four"}, {5,"five"}});
 
-/*
     BENCHMARK_ADVANCED("Bucket sort (1k)")(Catch::Benchmark::Chronometer meter) {
         vector<pair<int,int>> v = makePairVector(1000);
         meter.measure([&v] {
@@ -163,7 +160,6 @@ TEST_CASE("Bucket sort")
 			return v;
         });
     };
-*/
 }
 
 TEST_CASE("Radix sort")
@@ -198,7 +194,6 @@ TEST_CASE("Radix sort")
 	radixSort(vPair, 5);
 	REQUIRE(vPair == vector<pair<int,string>> {{1,"one"}, {2,"two"}, {3,"three"}, {4,"four"}, {5,"five"}});
 
-/*
     BENCHMARK_ADVANCED("Radix sort (1k)")(Catch::Benchmark::Chronometer meter) {
         vector<pair<int,int>> v = makePairVector(1000);
         meter.measure([&v] {
@@ -238,5 +233,4 @@ TEST_CASE("Radix sort")
 			return v;
         });
     };
-*/
 }
